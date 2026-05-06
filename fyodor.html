@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fyodor Dostoevsky Fan Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "EB Garamond", serif;
+        background: #111;
+        color: #f2e9dc;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      header {
+        height: 100vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+          url("https://upload.wikimedia.org/wikipedia/commons/2/2d/Vasily_Perov_-_Портрет_Ф.М.Достоевского_-_Google_Art_Project.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .hero {
+        max-width: 850px;
+        animation: fadeIn 1.5s ease;
+      }
+
+      .hero h1 {
+        font-family: "Cinzel", serif;
+        font-size: 4.5rem;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        color: #d9c7a7;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        background: rgba(10, 10, 10, 0.95);
+        padding: 15px;
+        z-index: 100;
+        border-bottom: 1px solid #3b3128;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 40px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #f2e9dc;
+        font-size: 1.1rem;
+        transition: 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #c89f65;
+      }
+
+      section {
+        padding: 90px 10%;
+      }
+
+      .section-title {
+        font-family: "Cinzel", serif;
+        font-size: 2.8rem;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #d6b37a;
+      }
+
+      .about-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 50px;
+        align-items: center;
+      }
+
+      .about-container img {
+        width: 100%;
+        border-radius: 18px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+      }
+
+      .about-text {
+        font-size: 1.3rem;
+      }
+
+      .quotes {
+        background: #181818;
+      }
+
+      .quote-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .quote-card {
+        background: linear-gradient(145deg, #1f1f1f, #141414);
+        padding: 30px;
+        border-radius: 18px;
+        border: 1px solid #3f3225;
+        transition: transform 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .quote-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .quote-card p {
+        font-size: 1.3rem;
+        font-style: italic;
+        margin-bottom: 18px;
+      }
+
+      .quote-card span {
+        color: #c89f65;
+        font-size: 1rem;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 18px;
+        transition: transform 0.4s ease;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+
+      .gallery img:hover {
+        transform: scale(1.03);
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        background: #0c0c0c;
+        border-top: 1px solid #2b241d;
+        color: #b9a488;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 3rem;
+        }
+
+        .hero p {
+          font-size: 1.2rem;
+        }
+
+        nav ul {
+          gap: 20px;
+        }
+
+        section {
+          padding: 70px 7%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="hero">
+        <h1>Fyodor Dostoevsky</h1>
+        <p>
+          Exploring the darkness, philosophy, and humanity inside one of
+          history's greatest writers.
+        </p>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#quotes">Quotes</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2 class="section-title">About Dostoevsky</h2>
+
+      <div class="about-container">
+        <img src="fyodor.jpg" alt="Fyodor Dostoevsky portrait" />
+
+        <div class="about-text">
+          <p>
+            Fyodor Dostoevsky was a Russian novelist, philosopher, and
+            journalist whose works explored psychology, morality, free will,
+            suffering, and faith. His novels such as
+            <em>Crime and Punishment</em>, <em>The Brothers Karamazov</em>, and
+            <em>Notes from Underground</em> deeply influenced literature,
+            philosophy, and existential thought.
+          </p>
+
+          <br />
+
+          <p>
+            His writing dives into the complexity of the human soul — examining
+            guilt, redemption, isolation, and the struggle between reason and
+            emotion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quotes" id="quotes">
+      <h2 class="section-title">Famous Quotes</h2>
+
+      <div class="quote-grid">
+        <div class="quote-card">
+          <p>
+            “The mystery of human existence lies not in just staying alive, but
+            in finding something to live for.”
+          </p>
+          <span>— The Brothers Karamazov</span>
+        </div>
+
+        <div class="quote-card">
+          <p>
+            “To go wrong in one's own way is better than to go right in someone
+            else's.”
+          </p>
+          <span>— Crime and Punishment</span>
+        </div>
+
+        <div class="quote-card">
+          <p>
+            “Pain and suffering are always inevitable for a large intelligence
+            and a deep heart.”
+          </p>
+          <span>— Crime and Punishment</span>
+        </div>
+
+        <div class="quote-card">
+          <p>
+            “Man only likes to count his troubles; he doesn't calculate his
+            happiness.”
+          </p>
+          <span>— Notes from Underground</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2 class="section-title">Gallery</h2>
+
+      <div class="gallery">
+        <img src="fdpprtrait.jpg" alt="Dostoevsky portrait" />
+
+        <img src="fd.jpg" alt="Painting of Dostoevsky" />
+
+        <img src="Dostoevsky1863.jpg" alt="Older photograph of Dostoevsky" />
+      </div>
+    </section>
+
+    <footer>
+      <p>Designed with admiration for Fyodor Dostoevsky's literary legacy.</p>
+    </footer>
+  </body>
+</html>
